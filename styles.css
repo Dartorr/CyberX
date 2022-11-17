@@ -1,0 +1,22 @@
+
+body{
+	overflow-x: hidden;
+}
+
+#text_2{
+position: relative;
+width: 449px;
+height: 60px;
+left: 25px;
+top: 20px;
+
+font-family: Raleway;
+font-style: normal;
+font-weight: 500;
+font-size: 18px;
+line-height: 21px;
+display: flex;
+align-items: center;
+
+color: #FFFFFF;
+}

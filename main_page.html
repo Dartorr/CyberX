@@ -1,0 +1,1072 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CyberX Minsk</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="style_page.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+        @font-face {
+            font-family: 'Raleway';
+            src: local('Raleway Regular'), local('Raleway-Regular'), url('ralewayregular.woff2') format('woff2'), url('ralewayregular.woff') format('woff'), url('ralewayregular.ttf') format('truetype');
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Raleway-Bold';
+            src: local('Raleway Bold'), local('Raleway-Bold'), url('ralewaybold.woff2') format('woff2'), url('ralewaybold.woff') format('woff'), url('ralewaybold.ttf') format('truetype');
+            font-weight: 700;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'Raleway-Thin';
+            src: local('Raleway Light'), local('Raleway-Light'), url('ralewaylight.woff2') format('woff2'), url('ralewaylight.woff') format('woff'), url('ralewaylight.ttf') format('truetype');
+            font-weight: 300;
+            font-style: normal;
+        }
+
+        body {
+            width: 100%;
+            height: 8380px;
+            background-color: #070718;
+            padding: 0%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        div {
+            padding: 0px;
+            width: 100%;
+            height: 720px;
+            color: white;
+            font-family: Raleway;
+        }
+
+
+
+        nav {
+            position: fixed;
+            width: 100%;
+            height: 80px;
+            margin-top: -10px;
+            background: rgba(2, 2, 19, 0.7);
+            display: inline;
+            z-index: 5000;
+        }
+
+        #inf {
+            background-image: url(inf_bg.png);
+            width: 100%;
+            background-size: 100%;
+            display: flex;
+            height: fit-content;
+        }
+
+        #games {
+
+            background-image: url(games_bg.png);
+            background-size: 100%;
+            height: 922px;
+        }
+
+        #price {
+            background-image: url(price_bg.png);
+            background-size: 100%;
+            width: 100%;
+            height: fit-content;
+            display: flex;
+        }
+
+        #obor {
+            background-image: url(obor_bg.png);
+            background-size: 100%;
+            height: fit-content;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+
+        #tourn {
+            background-image: url(tourn_bg.png);
+            width: 100%;
+            background-size: 100% auto;
+            height: 900px;
+        }
+
+        #sales {
+            background-image: url(sales_bg.png);
+            background-size: 100%;
+            height: 818px;
+        }
+
+        #rules {
+            background-image: url(rules_bg.png);
+            background-size: 100%;
+            height: 712px;
+        }
+
+        #fransh {
+            background-image: url(fransh_bg.png);
+            background-size: 100%;
+            height: 1150px;
+        }
+
+        #cont {
+            height: 900px;
+        }
+
+        #gray_box {
+            background-image: url(gray_box.png);
+            position: absolute;
+            width: 40%;
+            height: 900px;
+            background-size: contain;
+            z-index: 50;
+        }
+
+        #logo {
+            padding-left: 60px;
+            width: 77px;
+            height: 80px;
+            background-image: url(logo.png);
+            background-position: right;
+            background-size: 50%;
+            background-repeat: no-repeat;
+            display: inline-block;
+            position: absolute;
+        }
+
+        #nav {
+
+            height: 100%;
+            display: flex;
+            text-align: center;
+            vertical-align: middle;
+            margin: auto;
+        }
+
+        #link_cont {
+            padding-left: 242px;
+            padding-right: 119px;
+            position: absolute;
+            width: 1079px;
+            height: 80px;
+            display: flex;
+        }
+
+        a {
+            display: inline;
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            font-family: Raleway;
+            margin: auto;
+        }
+
+        a:hover {
+            text-decoration: underline solid red;
+        }
+
+
+
+        #reg_cont {
+            width: 43%;
+            height: fit-content;
+            font-size: 24px;
+            display: flex;
+            margin-left: 45%;
+            margin-top: 17%;
+            font-family: Raleway-Thin;
+            flex-direction: column;
+        }
+
+        #zag_1 {
+            font-size: 48px;
+            font-family: Raleway-Bold;
+            width: 100%;
+            height: 90px;
+            margin-top: 55px;
+            text-align: center;
+        }
+
+        #zag_2 {
+            font-size: 48px;
+            font-family: Raleway-Bold;
+            width: 100%;
+            height: 90px;
+            text-align: center;
+            margin-top: 328px;
+        }
+
+        #TV {
+            display: inline-block;
+            position: absolute;
+            margin-left: 92px;
+        }
+
+        .time {
+            height: 57px;
+            width: 225px;
+            background-color: #E22122;
+            margin-bottom: 13px;
+            text-align: center;
+        }
+
+        .price_cont {
+            margin-right: 33px;
+            width: 200px;
+            height: 407px;
+            display: inline-block;
+
+            padding: 0px;
+        }
+
+        .price_cont:first-child {
+            margin-right: 13px;
+            width: 225px;
+        }
+
+        .price_cont_TV {
+            margin-right: 33px;
+            width: 200px;
+            height: 267px;
+            display: inline-block;
+            margin-top: 0px
+        }
+
+        .price_cont_TV:first-child {
+            margin-right: 13px;
+            width: 225px;
+        }
+
+        .price_1 {
+            width: 100px;
+            height: 57px;
+            display: inline-block;
+            margin: 0px;
+            background-image: url(price_1.png);
+            background-size: 100%;
+
+            margin-left: -5px;
+        }
+
+        .price_2 {
+            width: 100px;
+            height: 57px;
+            display: inline-block;
+            margin: 0px;
+            background-image: url(price_2.png);
+            background-size: 100%;
+            margin-left: -5px;
+        }
+
+        .cont_for_cont {
+            height: 57px;
+            margin-bottom: 13px;
+        }
+
+        .text {
+            position: absolute;
+            text-align: center;
+            font-size: 24px;
+        }
+
+        .obor_name {
+            width: 243px;
+            height: 67px;
+            text-align: right;
+            font-family: Raleway;
+            font-size: 14px;
+            position: absolute;
+        }
+
+        .tourn_slot {
+            width: 1000px;
+            height: 98px;
+            background-color: #1414A866;
+            position: absolute;
+            margin-left: 29%;
+            margin-top: 184px;
+            display: flex;
+            width: 70%;
+            position: relative;
+        }
+
+        .tourn_fond {
+            background-image: url(tourn_fond.png);
+            background-size: 100%;
+            width: 338px;
+            height: 84px;
+            position: absolute;
+            margin-left: 625px;
+            margin-top: 7px;
+            text-align: center;
+            font-size: 18px;
+            padding-top: 14px;
+            background-repeat: no-repeat;
+            margin-left: 10%;
+            position: relative;
+            background-size: 100% 100%;
+            height: 70%;
+        }
+
+        .tourn_image {
+            width: 218px;
+            height: 98px;
+            background-size: auto 100%;
+            background-repeat: no-repeat;
+            text-align: center;
+            margin-left: 123px;
+            position: absolute;
+            background-position: center;
+            background-image: url(cs.png);
+            margin-left: 10%;
+            position: relative;
+            background-size: contain;
+        }
+
+        .tourn_type {
+            width: 140px;
+            height: 31px;
+            text-align: center;
+            font-size: 18px;
+            position: absolute;
+            margin-left: 412px;
+            margin-top: 18px;
+        }
+
+        .tourn_date {
+            width: 140px;
+            height: 31px;
+            text-align: center;
+            font-size: 14px;
+            position: absolute;
+            margin-left: 412px;
+            margin-top: 49px;
+            margin-left: 10%;
+            margin-top: 18px;
+            position: relative;
+        }
+
+        span {
+            font-size: 24px;
+            font-family: Raleway-Bold;
+        }
+
+        .sale_item {
+    width: 300px;
+    height: 550px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    flex: 1 1;
+    text-align: center;
+    align-items: center;
+    background-position: center;
+    margin-top: 10%;
+}
+    </style>
+
+    </script>
+</head>
+
+<body>
+    <nav>
+        <div id="logo"></div>
+        <div id="link_cont">
+            <a href="#inf" class="scroll-to">О клубе</a>
+            <a href="#games" class="scroll-to">Игры</a>
+            <a href="#price" class="scroll-to">Стоимость</a>
+            <a href="#obor" class="scroll-to">Оборудование</a>
+            <a href="#tourn" class="scroll-to">Турниры</a>
+            <a href="#sales" class="scroll-to">Акции</a>
+            <a href="#rules" class="scroll-to">Правила клуба</a>
+            <a href="#fransh" class="scroll-to">Франшиза</a>
+            <a href="#cont" class="scroll-to">Контакты</a>
+        </div>
+
+         <script type="text/javascript">
+ $("a.scroll-to").on("click", function(e){
+    e.preventDefault();
+    var anchor = $(this).attr('href');
+    $('html, body').stop().animate({
+        scrollTop: $(anchor).offset().top - 60
+    }, 800);
+});
+ </script>
+    </nav>
+    <div id="inf">
+
+        <div id="reg_cont" style="margin-bottom: 150px">
+            <span style="font-size: 64px;
+            font-family: Raleway-Bold; display: inline; ;">CyberX Минск 24/7</span><br>
+            Ультрасовременное киберспортивное пространство для тех, кто любит проводить время с удовольствием и полным
+            погружением в атмосферу.<br>
+            <br>Мы проводим регулярные киберспортивные мероприятия, где можно заработать, повысить свой скилл, а также
+            найти свою тусовку.
+        </div>
+    </div>
+    <div id="games">
+        <div id="zag_1">
+            Игры на ПК
+            <div id = "slider">
+        <div id = "polosa">
+            <img src="images/dota.png" alt="">
+            <img src="images/gta5.png" alt="">
+            <img src="images/heartstone.png" alt="">
+            <img src="images/pubg.png" alt="" >
+            <img src="images/warface.png" alt="">
+            <img src="images/valorant.png" alt="">
+            <img src="images/ll.png" alt="">
+            <img src="images/warzone.png" alt="">
+            <img src="images/WoW.png" alt="">
+            <img src="images/1.6.png" alt="">
+            <img src="images/over.png" alt="">
+            <img src="images/osu.png" alt="">
+
+        </div>
+
+    </div>
+        </div>
+        <div id="zag_2">
+            Игры на PS5
+        </div>
+    </div>
+    <div id="price">
+        <div class="text" style=" margin-left: 60%; margin-top: 45px; width: 329px; height: 66px; font-size: 48px;">
+            ПРАЙС
+        </div>
+        <!--
+        <div class="text" style="width: 329px; height: 66px; margin-top: 171px; margin-left: 1043px; font-size: 24px;">
+            Аренда TV
+        </div>
+        <div class="text" style=" margin-left: 1126px; margin-top: 247px; width: 101px; height: 33px; font-size: 24px;">
+            ПН-ПТ
+        </div>
+        <div class="text" style=" margin-left: 1236px; margin-top: 247px; width: 101px; height: 33px; font-size: 24px;">
+            СБ-ВС
+        </div>-->
+        <div style="    width: 100%;
+        height: fit-content;
+        color: white;
+        font-family: Raleway;
+        margin-left: 83px;
+        margin-top: 280px;
+        padding: 0px;
+        border: none;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;">
+            <div style="    padding: 0px;
+            color: white;
+            font-family: Raleway;
+            width: 720px;
+            display: flex;
+            height: fit-content;
+            flex-direction: row;
+        margin-bottom: 130px;">
+                <!--
+                <div class="text" style="width: 329px; height: 66px; margin-top: 171px; margin-left: 269px; font-size: 24px;">
+                    STANDART
+                </div>
+                <div class="text" style=" margin-left: 321px; margin-top: 247px; width: 101px; height: 33px; font-size: 24px;">
+                    ПН-ПТ
+                </div>
+                <div class="text" style=" margin-left: 434px; margin-top: 247px; width: 101px; height: 33px; font-size: 24px;">
+                    СБ-ВС
+                </div>
+                <div class="text" style="width: 329px; height: 66px; margin-top: 171px; margin-left: 504px; font-size: 24px;">
+                    VIP
+                </div>
+                <div class="text" style=" margin-left: 553px; margin-top: 247px; width: 101px; height: 33px; font-size: 24px;">
+                    ПН-ПТ
+                </div>
+                <div class="text" style=" margin-left: 665px; margin-top: 247px; width: 101px; height: 33px; font-size: 24px;">
+                    СБ-ВС
+                </div>-->
+                <div class="text" style="text-align: left; margin-left: 268px; margin-top: -95px;">STANDART
+                </div>
+                <div class="text" style="text-align: left; margin-left: 240px; margin-top: -45px;">ПН-ПТ
+                </div>
+                <div class="text" style="text-align: left; margin-left: 345px; margin-top: -45px;;">СБ-ВС
+                </div>
+                <div class="text" style="text-align: left; margin-left: 545px; margin-top: -95px;">VIP
+                </div>
+                <div class="text" style="text-align: left; margin-left: 468px; margin-top: -45px;;">ПН-ПТ
+                </div>
+                <div class="text" style="text-align: left; margin-left: 580px; margin-top: -45px;;">СБ-ВС
+                </div>
+                <div class="price_cont">
+                    <div class="time">
+                        <div class="text" style=" margin-top: 12px; width: 225px;">1 час</div>
+                    </div>
+                    <div class="time">
+                        <div class="text" style=" margin-top: 12px; width: 225px;">3 часа</div>
+                    </div>
+                    <div class="time">
+                        <div class="text" style=" margin-top: 12px; width: 225px;">5 часов</div>
+                    </div>
+                    <div class="time">
+                        <div class="text" style=" width: 225px;">ПАКЕТ "УТРО"<br>8:00-13:00</div>
+                    </div>
+                    <div class="time">
+                        <div class="text" style="  width: 225px;">ПАКЕТ "ДЕНЬ"<br>13:00-18:00</div>
+                    </div>
+                    <div class="time">
+                        <div class="text" style="  width: 225px;">ПАКЕТ "НОЧЬ"<br>22:00-8:00</div>
+                    </div>
+                </div>
+                <div class="price_cont">
+                    <div class="cont_for_cont">
+                        <div class="price_1">
+                            <div class="text" style="margin-left: 0px; margin-top: 12px; width: 79px;">4р</div>
+                        </div>
+                        <div class="price_2">
+                            <div class="text" style="text-align:right;margin-top: 12px; width: 79px;">5р</div>
+                        </div>
+                    </div>
+                    <div class="cont_for_cont">
+                        <div class="price_1">
+                            <div class="text" style="margin-left: 0px; margin-top: 12px; width: 79px;">9р</div>
+                        </div>
+                        <div class="price_2">
+                            <div class="text" style="text-align:right;margin-top: 12px; width: 79px;">11р</div>
+                        </div>
+                    </div>
+                    <div class="cont_for_cont">
+                        <div class="price_1">
+                            <div class="text" style="margin-left: 0px; margin-top: 12px; width: 79px;">14р</div>
+                        </div>
+                        <div class="price_2">
+                            <div class="text" style="text-align:right;margin-top: 12px; width: 79px;">16р</div>
+                        </div>
+                    </div>
+                    <div class="cont_for_cont">
+                        <div class="price_1">
+                            <div class="text" style="margin-left: 0px; margin-top: 12px; width: 79px;">10р</div>
+                        </div>
+                        <div class="price_2">
+                            <div class="text" style="text-align:right;margin-top: 12px; width: 79px;">12р</div>
+                        </div>
+                    </div>
+                    <div class="cont_for_cont">
+                        <div class="price_1">
+                            <div class="text" style="margin-left: 0px; margin-top: 12px; width: 79px;">12р</div>
+                        </div>
+                        <div class="price_2">
+                            <div class="text" style="text-align:right;margin-top: 12px; width: 79px;">15р</div>
+                        </div>
+                    </div>
+                    <div class="cont_for_cont">
+                        <div class="price_1">
+                            <div class="text" style="margin-left: 0px; margin-top: 12px; width: 79px;">17р</div>
+                        </div>
+                        <div class="price_2">
+                            <div class="text" style="text-align:right;margin-top: 12px; width: 79px;">20р</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="price_cont">
+                    <div class="cont_for_cont">
+                        <div class="price_1">
+                            <div class="text" style="margin-left: 0px; margin-top: 12px; width: 79px;">5р</div>
+                        </div>
+                        <div class="price_2">
+                            <div class="text" style="text-align:right;margin-top: 12px; width: 79px;">6р</div>
+                        </div>
+                    </div>
+                    <div class="cont_for_cont">
+                        <div class="price_1">
+                            <div class="text" style="margin-left: 0px; margin-top: 12px; width: 79px;">11р</div>
+                        </div>
+                        <div class="price_2">
+                            <div class="text" style="text-align:right;margin-top: 12px; width: 79px;">14р</div>
+                        </div>
+                    </div>
+                    <div class="cont_for_cont">
+                        <div class="price_1">
+                            <div class="text" style="margin-left: 0px; margin-top: 12px; width: 79px;">18р</div>
+                        </div>
+                        <div class="price_2">
+                            <div class="text" style="text-align:right;margin-top: 12px; width: 79px;">23р</div>
+                        </div>
+                    </div>
+                    <div class="cont_for_cont">
+                        <div class="price_1">
+                            <div class="text" style="margin-left: 0px; margin-top: 12px; width: 79px;">12,5р</div>
+                        </div>
+                        <div class="price_2">
+                            <div class="text" style="text-align:right;margin-top: 12px; width: 79px;">14,5р</div>
+                        </div>
+                    </div>
+                    <div class="cont_for_cont">
+                        <div class="price_1">
+                            <div class="text" style="margin-left: 0px; margin-top: 12px; width: 79px;">15р</div>
+                        </div>
+                        <div class="price_2">
+                            <div class="text" style="text-align:right;margin-top: 12px; width: 79px;">20р</div>
+                        </div>
+                    </div>
+                    <div class="cont_for_cont">
+                        <div class="price_1">
+                            <div class="text" style="margin-left: 0px; margin-top: 12px; width: 79px;">20р</div>
+                        </div>
+                        <div class="price_2">
+                            <div class="text" style="text-align:right;margin-top: 12px; width: 79px;">25р</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="TV" style="    padding: 0px;
+            height: fit-content;
+            color: white;
+            font-family: Raleway;
+            margin-left: 92px;
+            width: 500px;
+            flex-direction: row;
+            position: relative;
+        margin-bottom: 100px;">
+                <div class="text" style="text-align: left; margin-left: 268px; margin-top: -95px;">Аренда TV
+                </div>
+                <div class="text" style="text-align: left; margin-left: 240px; margin-top: -45px;">ПН-ПТ
+                </div>
+                <div class="text" style="text-align: left; margin-left: 345px; margin-top: -45px;;">СБ-ВС
+                </div>
+                <div class="price_cont_TV">
+                    <div class="time">
+                        <div class="text" style=" margin-top: 12px; width: 225px;">1 час</div>
+                    </div>
+                    <div class="time">
+                        <div class="text" style=" margin-top: 12px; width: 225px;">3 час</div>
+                    </div>
+                    <div class="time">
+                        <div class="text" style=" margin-top: 12px; width: 225px;">5 час</div>
+                    </div>
+                    <div class="time">
+                        <div class="text" style=" width: 225px;">ПАКЕТ "НОЧЬ"<br>22:00-8:00</div>
+                    </div>
+                </div>
+                <div class="price_cont_TV">
+                    <div class="cont_for_cont">
+                        <div class="price_1">
+                            <div class="text" style="margin-left: 0px; margin-top: 12px; width: 79px;">5р</div>
+                        </div>
+                        <div class="price_2">
+                            <div class="text" style="text-align:right;margin-top: 12px; width: 79px;">8р</div>
+                        </div>
+                    </div>
+                    <div class="cont_for_cont">
+                        <div class="price_1">
+                            <div class="text" style="margin-left: 0px; margin-top: 12px; width: 79px;">10р</div>
+                        </div>
+                        <div class="price_2">
+                            <div class="text" style="text-align:right;margin-top: 12px; width: 79px;">15р</div>
+                        </div>
+                    </div>
+                    <div class="cont_for_cont">
+                        <div class="price_1">
+                            <div class="text" style="margin-left: 0px; margin-top: 12px; width: 79px;">15р</div>
+                        </div>
+                        <div class="price_2">
+                            <div class="text" style="text-align:right;margin-top: 12px; width: 79px;">20р</div>
+                        </div>
+                    </div>
+                    <div class="cont_for_cont">
+                        <div class="price_1">
+                            <div class="text" style="margin-left: 0px; margin-top: 12px; width: 79px;">20р</div>
+                        </div>
+                        <div class="price_2">
+                            <div class="text" style="text-align:right;margin-top: 12px; width: 79px;">25р</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="obor">
+        <div class="text"
+            style="font-family: Raleway-Bold; margin-top: 10px; width: 100%; height: 66px; font-size: 48px; text-align: center;">
+            Оборудование
+        </div>
+        <div
+            style="position:relative; width: 400px; height: 790px; margin-left: 200px; margin-top: 150px; margin-bottom: 100px;">
+            <div class="text"
+                style="font-family: Raleway;margin-left: -14px; margin-top: -45px; width: 100%; height: 66px; font-size: 24px;">
+                STANDART
+            </div>
+            <div style="position: absolute; background-image: url(obor.png); background-size: 100%; 
+        height: 789px; width: 342px; ">
+            </div>
+            <div class="obor_name" style="margin-left: -118px; margin-top: 124px;">
+                Видеокарта GeForce <br> RTX 3060
+            </div>
+            <div class="obor_name" style="margin-left: -118px; margin-top: 330px;">
+                Мышь <br>HyberX Pulsefire Surge
+            </div>
+            <div class="obor_name" style="margin-left: -118px; margin-top: 538px;">
+                Процессор<br>
+                Intel i5-10600KF
+            </div>
+            <div class="obor_name" style="margin-left: -118px; margin-top: 737px;">
+                Клавиатура<br>
+                HyperX Alloy FPS PRO
+            </div>
+            <div class="obor_name" style="text-align: left; margin-left: 224px; margin-top: 124px;">
+                Монитор<br>
+                24.5 FULL HD 240hz
+            </div>
+            <div class="obor_name" style="text-align: left; margin-left: 224px; margin-top: 330px;">
+                Наушники<br>
+                HyperX Cloud Alpha
+            </div>
+            <div class="obor_name" style="text-align: left; margin-left: 224px; margin-top: 538px;">
+                Оперативная память<br>
+                16 Gb
+            </div>
+            <div class="obor_name" style="text-align: left; margin-left: 224px; margin-top: 737px;">
+                Кресло<br>
+                DXRacer OH/REO/NR
+            </div>
+        </div>
+        <div
+            style="position:relative; width: 400px; height: 790px; margin-left: 200px; margin-top: 150px; margin-bottom: 100px;">
+            <div class="text"
+                style="font-family: Raleway;margin-left: -18px; margin-top: -45px; width: 100%; height: 66px; font-size: 24px;">
+                VIP
+            </div>
+            <div style="position: absolute; background-image: url(obor.png); background-size: 100%; 
+        height: 789px; width: 342px; ">
+            </div>
+            <div class="obor_name" style="margin-left: -118px; margin-top: 124px;">
+                Видеокарта GeForce <br> RTX 3060
+            </div>
+            <div class="obor_name" style="margin-left: -118px; margin-top: 330px;">
+                Мышь <br>HyberX Pulsefire Surge
+            </div>
+            <div class="obor_name" style="margin-left: -118px; margin-top: 538px;">
+                Процессор<br>
+                Intel i5-10600KF
+            </div>
+            <div class="obor_name" style="margin-left: -118px; margin-top: 737px;">
+                Клавиатура<br>
+                HyperX Alloy FPS PRO
+            </div>
+            <div class="obor_name" style="text-align: left; margin-left: 224px; margin-top: 124px;">
+                Монитор<br>
+                24.5 FULL HD 240hz
+            </div>
+            <div class="obor_name" style="text-align: left; margin-left: 224px; margin-top: 330px;">
+                Наушники<br>
+                HyperX Cloud Alpha
+            </div>
+            <div class="obor_name" style="text-align: left; margin-left: 224px; margin-top: 538px;">
+                Оперативная память<br>
+                16 Gb
+            </div>
+            <div class="obor_name" style="text-align: left; margin-left: 224px; margin-top: 737px;">
+                Кресло<br>
+                DXRacer OH/REO/NR
+            </div>
+        </div>
+        <!--<div style="position:relative;width: 400px; height: 790px;;">
+            <div class="text"
+                style="font-family: Raleway;margin-left: 0px; margin-top: 166px; width: 100%; height: 66px; font-size: 24px;">
+                VIP
+            </div>
+            <div style="position: absolute; background-image: url(obor.png); background-size: 100%; 
+            height: 789px; width: 342px; margin-top: 226px; margin-left: 248px;">
+            </div>
+            <div class="obor_name" style="margin-left: 134px; margin-top: 348px;">
+                Видеокарта GeForce <br> RTX 3070
+            </div>
+            <div class="obor_name" style="margin-left: 134px; margin-top: 555px;">
+                Мышь <br>HyberX Pulsefire Surge
+            </div>
+            <div class="obor_name" style="margin-left: 134px; margin-top: 762px;">
+                Процессор<br>
+                Intel i5-10600KF
+            </div>
+            <div class="obor_name" style="margin-left: 134px; margin-top: 969px;">
+                Клавиатура<br>
+                HyperX Alloy FPS PRO
+            </div>
+            <div class="obor_name" style="text-align: left; margin-left: 447px; margin-top: 348px;">
+                Монитор<br>
+                24.5 FULL HD 240hz
+            </div>
+            <div class="obor_name" style="text-align: left; margin-left: 447px; margin-top: 555px;">
+                Наушники<br>
+                HyperX Cloud Alpha 5
+            </div>
+            <div class="obor_name" style="text-align: left; margin-left: 447px; margin-top: 762px;">
+                Оперативная память<br>
+                16 Gb
+            </div>
+            <div class="obor_name" style="text-align: left; margin-left: 447px; margin-top: 969px;">
+                Кресло<br>
+                DXRacer OH/IS11/NR
+            </div>
+        </div>-->
+    </div>
+    <div id="tourn" style="padding-top: 184px;">
+        <div class="text"
+            style="font-family: Raleway-Bold; margin-top: -126px; width: 100%; height: 66px; font-size: 48px;">
+            Турниры
+        </div>
+        <div class="tourn_slot" style="margin-top: 0px;">
+            <div class="tourn_image" style="background-image: url(cs.png);"></div>
+            <div class="tourn_date"><span style="font-size:18px; font-family: Raleway;">х2 wingman</span><br>15 января
+            </div>
+            <div class="tourn_fond">Призовой фонд<br> <span>700р</span></div>
+        </div>
+        <div class="tourn_slot" style="margin-top: 18px;">
+            <div class="tourn_image" style="background-image: url(dota.png); background-size: auto 100%"></div>
+            <div class="tourn_date"><span style="font-size:18px; font-family: Raleway;">5х5 mix</span><br>16 января
+            </div>
+            <div class="tourn_fond">Призовой фонд<br> <span>700р</span></div>
+        </div>
+        <div class="tourn_slot" style="margin-top: 18px;">
+            <div class="tourn_image" style="background-image: url(cs.png);"></div>
+            <div class="tourn_date"><span style="font-size:18px; font-family: Raleway;">2х2 aim</span><br>22 января
+            </div>
+            <div class="tourn_fond">Призовой фонд<br> <span>700р</span></div>
+        </div>
+        <div class="tourn_slot" style="margin-top: 18px;">
+            <div class="tourn_image" style="background-image: url(lOFl.png);"></div>
+            <div class="tourn_date"><span style="font-size:18px; font-family: Raleway;">5х5</span><br>23 января</div>
+            <div class="tourn_fond">Призовой фонд<br> <span>700р</span></div>
+        </div>
+        <div class="tourn_slot" style="margin-top: 18px;">
+            <div class="tourn_image" style="background-image: url(fort.png);"></div>
+            <div class="tourn_date"><span style="font-size:18px; font-family: Raleway;">solo</span><br>29 января</div>
+            <div class="tourn_fond">Призовой фонд<br> <span>700р</span></div>
+        </div>
+        <div class="tourn_slot" style="margin-top: 18px;">
+            <div class="tourn_image" style="background-image: url(cs.png);"></div>
+            <div class="tourn_date"><span style="font-size:18px; font-family: Raleway;">5х5</span><br>30 января</div>
+            <div class="tourn_fond">Призовой фонд<br> <span>700р</span></div>
+        </div>
+    </div>
+    <div id="sales" style="display: flex; flex-direction: row; flex-wrap: wrap; height: fit-content;">
+        <div class="text"
+            style="font-family: Raleway-Bold; margin-left: 0px; margin-top: 45px; width: 480px; height: 66px; font-size: 48px;">
+            Акции
+        </div>
+        <div style="width: 100%;margin-left: 13%;margin-right: 13% ;display: flex; flex-direction: row; flex-wrap: wrap; height: fit-content; text-align: center; vertical-align: bottom; ">
+            <div class="sale_item" style="background-image: url(sale_1.png);">
+
+            </div>
+            <div class="sale_item" style="background-image: url(sale_2.png); width: 350px; height: 700px; margin-top: 0%;">
+
+            </div>
+            <div class="sale_item" style="background-image: url(sale_3.png);">
+
+            </div>
+        </div>
+    </div>
+    <div id="rules" style="display: flex; flex-wrap: wrap; flex-direction: row; height: fit-content;">
+        <div class="text"
+            style="font-family: Raleway-Bold; margin-top: 50px; width: 100%; height: 66px; font-size: 48px; text-align: center;">
+            Правила клуба
+        </div>
+        <div style="
+        width: 548px;
+        height: 428px;
+        margin-left: 51px;
+        margin-top: 176px;
+        
+        font-family: Raleway;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 16px;
+        align-items: center;">
+            <ul>
+                <li> Клуб оставляет за собой право в ограничении доступа в соответствии с требованиями служб
+                    правопорядка и органов полиции, прописанными в законе о местах массового пребывания людей.
+                    Посетители и их личные вещи могут быть досмотрены службой охраны клуба с целью обеспечения общей
+                    безопасности. В случае отказа пройти данную процедуру администрация вправе не допустить посетителя в
+                    клуб;
+                </li>
+                <li>Запрещается проносить алкогольные напитки в зал;
+                </li>
+                <li>Запрещается спать в зале;
+                </li>
+                <li>Запрещен доступ в зал с животными;
+                </li>
+                <li>Запрещен доступ в зал лицам в состоянии алкогольного или наркотического опьянения, степень которого
+                    администрация клуба определяет по своему усмотрению;
+                </li>
+                <li>Запрещается курение на всей территории комплекса;
+                </li>
+                <li>Запрещается пользоваться симуляторами интернет-казино;
+                </li>
+                <li>Запрещается кричать и нецензурно выражаться;
+                </li>
+                <li>Запрещается находиться в зале без билета;
+                </li>
+                <li>Запрещается употреблять на территории зала снюс, насвай и другие виды бездымного табака;
+                </li>
+                <li>Не допускается вход и нахождение в зал в верхней одежде, с большими сумками и без обуви;
+                </li>
+                <li>Запрещается класть ноги на стол;
+                </li>
+                <li>Запрещается наносить ущерб имуществу клуба или стучать по нему;
+                </li>
+                <li>Запрещается облокачиваться на полки, трогать системный блок и самостоятельно подключать любые
+                    девайсы, в том числе зарядные устройства;
+                </li>
+                <li>Запрещается любая несанкционированная торговля на территории клуба;
+                </li>
+            </ul>
+        </div>
+        <div style="
+        width: 668px;
+        height: 467px;
+        margin-left: 51px;
+        margin-top: 176px;
+        margin-bottom: 100px;
+        
+        font-family: Raleway;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 16px;
+        align-items: center;">
+            <ul>
+                <li> Приобретение ночных билетов возможно по оригиналу паспорта, водительскому удостоверению или
+                    военному билету. Вход и посадка на ночной сеанс производится по предъявлению оригинала
+                    паспорта/водительского удостоверения/военного билета и ночного билета. При покупке одного ночного
+                    билета на человека необходим один документ удостоверяющий личность;
+                </li>
+                <li>Фото- и видеосъемка возможна с использованием непрофессиональной техники;
+                </li>
+                <li>Профессиональная видео- и фотосъемка возможны только для аккредитованных журналистов;
+                </li>
+                <li>Посещая клуб, вы соглашаетесь принимать участие в возможной фото- и видеосъемке, теле- или
+                    радиотрансляции мероприятия в качестве посетителя и разрешаете клубу использовать фото-, видео- и
+                    аудиозаписи с вашим участием в коммерческих целях на территории всех стран мира;
+                </li>
+                <li>Вам придется покинуть клуб, если вы будете агрессивно себя вести по отношению к другим гостям и
+                    (или) персоналу, а также нарушать правила клуба;
+                </li>
+                <li>Посетители несут ответственность за соблюдение правопорядка, правил и условий нахождения в клубе;
+                </li>
+                <li>Администрация не несет ответственности за сохранность личных вещей и ценностей в помещениях клуба;
+                </li>
+                <li>Оплачивая игровое время, Посетитель автоматически соглашается с изложенными в данном документе
+                    правилами;
+                </li>
+                <li>Администрация клуба не несёт ответственности за сохранность игровых аккаунтов посетителей;
+                </li>
+                <li>В случае причинения ущерба имуществу клуба по вине посетителя, посетитель обязан в полном объёме
+                    возместить сумму причиненного ущерба. Стоимость имущества для расчёта суммы ущерба определяется
+                    клубом на основании акта инвентаризации имущества, который хранится уадминистратора-кассира
+                    компьютерного клуба.
+                </li>
+                <li>При нарушении настоящих Правил, общепринятых правил и норм поведения сотрудники компьютерного клуба
+                    имеют право вывести такого посетителя из компьютерного клуба без компенсации стоимости услуг.
+                </li>
+
+            </ul>
+        </div>
+    </div>
+    <div id="fransh">
+        <div class="text"
+            style="font-family: Raleway-Bold; margin-left: 57px; margin-top: 77px; width: 480px; height: 66px; font-size: 48px;">
+            Франшиза
+            <p id = "text_2">Оставьте заявку и мы отправим Вам дополнительную информацию в течение 24 часов.  </p>
+
+        </div>
+
+           
+           <div id = "forma_obr_sv" style = "position: absolute; top: 6350px; left : 100px">
+           <form id="contactform"> 
+        <p class="contact"><label for="name"></label></p> 
+        <input id="name" name="name" placeholder="ФИО" required="" tabindex="1" type="text" style="border: 1px solid #E22122;
+box-sizing: border-box;background-color: rgba(255, 255, 255, 0.1);color : white; width: 420px; height: 25px"> 
+ 
+        <p class="contact"><label for="email"></label></p> 
+        <input id="email" name="email" placeholder="e-mail" required="" tabindex="2" type="text" style="border: 1px solid #E22122;
+box-sizing: border-box;background-color: rgba(255, 255, 255, 0.1); color : white; width: 420px; height: 25px"> 
+ 
+        <p class="contact"><label for="Subject"></label></p> 
+        <input id="subject" name="subject" placeholder="Номер телефона" required="" tabindex="2" type="text" style="border: 1px solid #E22122;
+box-sizing: border-box;background-color: rgba(255, 255, 255, 0.1);color : white; width: 420px; height: 25px"> 
+ 
+             </form> 
+
+             <div id = "sogl" style="position: relative; top : 30px; font-size: 12px; font-family: Raleway;">
+                 Оставляя заявку вы соглашаетесь с Политикой конфиденциальности
+                 <input type="checkbox" name="a" style="position: relative; left: 10px; background-color:black; "> 
+
+             </div>
+
+             <div class = "container">
+                
+                 <input type="image" src="Rectangle.png" alt="Кнопка «input»" style="position: relative; top:-650px;">
+                <p style="position: relative; top:-698px; left: 50px; width: 125px;">Оставить заявку</p>
+             </div>
+
+
+            </div>
+
+            <div class = "fransh_right">
+                <p style="position: relative; top : 150px; left : 950px; font-size: 30px; font-family: Raleway">Откройте компьютерный клуб по франшизе</p>
+                <p style="position: relative; top : 130px; left : 1050px; font-size: 45px; font-family: Raleway; font-weight: 600">CyberX Community</p>
+
+                <ul style="position: relative; top : 150px; left : 950px; font-size: 30px; font-family: Raleway">
+                    <li>Доход от 300 000 рублей в месяц</li>
+                    <li>Гарантируемая окупаемость бизнес-модели</li>
+                    <li>130 клубов по всему миру</li>
+                </ul>
+
+                <p style="position: relative; top : 150px; left : 990px; font-size: 12px; font-family: Raleway">Мы разработали прибыльную бизнес-модель и масштабируем ее по<br> 
+                франкчайзиноговой модели</p>
+                <p style="position: relative; top : 145px; left : 990px; font-size: 12px; font-family: Raleway">Посмотрите на бизнес-план и убедитесь сами!</p>
+                <a href="" style="position: relative; top : 150px; left : 990px; font-size: 12px;" ><img src="Rectangle.png"></a>
+                <p style="position: relative; top : 103px; left : 1015px; font-size: 16px; font-family: Raleway; width: 165px">Скачать бизнес план</p>
+            </div>
+
+            <div style="position: relative; left: 100px; top:-150px; font-family: Raleway; font-size: 50px; font-weight: 600">CyberX - новый этап индустрии<br> развлечений</div>
+
+            <div style="position: relative; left: 100px; top:-700px; font-family: Raleway; font-size: 24px">Киберспортивный клуб CyberX —<br> это не только настоящий киберспортивный социальный лифт для<br> талантливого молодого игрока в мир киберспорта, но и<br> абсолютно новый вид времяпрепровождения для взрослого<br> поколения.</div>
+
+    </div>
+
+    <div id="cont">
+        <div id="gray_box">
+            <div class="text"
+                style="font-family: Raleway-Bold; margin-top: 252px; font-size: 48px;">
+                Контакты
+            </div>
+            <div class="text"
+                style="font-family: Raleway-Bold; margin-top: 378px; font-size: 48px;">
+                24/7
+            </div>
+            <div class="text"
+                style="margin-top: 484px; font-size: 24px;">
+                г.Минск, ул. Толбухина,2
+            </div>
+            <div class="text"
+                style="margin-top: 509px; font-size: 14px;">
+                ст.м. Парк Челюскинцев
+            </div>
+            <div class="text"
+                style="margin-top: 547px; font-size: 14px;">
+                +375 (44) 513-00-00
+            </div>
+        </div>
+        <div style="position:relative;">
+
+            <iframe src="https://yandex.by/map-widget/v1/-/CCU5IQxoxB"
+                style="position:relative; width: 100%; height: 800px;"></iframe>
+        </div>
+    </div>
+
+<script type='text/javascript' src="main.js"></script>
+</body>
+
+</html>
